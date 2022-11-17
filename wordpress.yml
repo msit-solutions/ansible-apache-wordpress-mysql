@@ -1,0 +1,17 @@
+---
+- name: about the wordpress
+  hosts: all
+  remote_user: ec2-user
+  become: true
+  become_user: root
+  tasks:
+    - name: 1. download wordpress I
+      get_url:
+       url: https://wordpress.org/latest.tar.gz
+       dest: /var/www/html/
+    - name: 2. extract wordpress
+      unarchive:
+       src: /var/www/html/wordpress-6.1.1.tar.gz
+       dest: /var/www/html/
+       copy: no
+...
