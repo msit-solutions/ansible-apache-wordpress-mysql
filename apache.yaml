@@ -1,0 +1,24 @@
+---
+ - name: congiuring Apache web server
+   hosts: all
+   tasks:
+     - name: Install apache2 package
+       yum:
+         name: httpd
+         state: present
+     - name: start apache2 service
+       service:
+         name: httpd
+         state: started
+     - name: copy index file to apache2 directory
+       copy:
+         src: /tmp/index.html
+         dest: /var/www/html/
+     - name: pause for 1 min
+       pause:
+         minutes: 1
+     - name: restart apache2 service
+       service:
+         name: httpd
+         state: reloaded
+...
