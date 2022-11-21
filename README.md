@@ -1,8 +1,11 @@
 lamp
+
 Installation of the ansible on the amazon-linux
+
 Go to aws managemet console
 create two ec2 instance of amazon-linux ,instance-type with t2.micro,edit the security groups with ports ssh-22,http-80
 connect the two instance to the terminal and follow he below steps
+
 on master machine or controller amazon-linux
 sudo yum update
 sudo amazon-linux-extras install ansible2 -y
