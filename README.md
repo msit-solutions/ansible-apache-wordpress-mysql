@@ -67,8 +67,6 @@ install on master machine
 *for sytnax check 
 -->> ansible-playbook [play-book_name] --syntax-check
 
-*for running of the playbook 
-
--->>ansible-playbook [play-book_name] -b
+*for running of the playbook -->>ansible-playbook [play-book_name] -b
 
 ===========
