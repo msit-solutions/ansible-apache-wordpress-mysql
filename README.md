@@ -56,6 +56,9 @@ need to install docker on the node machine
 * sudo yum search docker 
 * sudo yum info docker 
 * sudo yum install docker
+* sudo systemctl start docker.service
+* sudo systemctl status docker.service
+* sudo docker --version
 * sudo usermod -a -G docker ec2-user
 
 install on master machine
